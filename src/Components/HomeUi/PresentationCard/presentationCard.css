@@ -1,0 +1,56 @@
+.presentation-card {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: #1c1c1c;
+    width: 90%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    transition: 0.5s;
+}
+
+.presentation-card:hover {
+    transform: scale(1.03)
+}
+
+.presentation-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.substract {
+    border-radius: 5px 0 0 5px;
+    font-size: medium;
+    background-color: #c0c0c0;
+    border: none;
+    padding: 5px;
+}
+
+.add {
+    border-radius: 0 5px 5px 0;
+    font-size: medium;
+    color: white;
+    background-color: rgba(1,161,115,1);
+    border: none;
+    padding: 5px;
+}
+
+.quantity {
+    display: flex;
+    margin: 10px;
+}
+
+.quantity-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px 0 15px;
+    font-weight: 900;
+}
+
+.name {
+    font-weight: 900;
+}

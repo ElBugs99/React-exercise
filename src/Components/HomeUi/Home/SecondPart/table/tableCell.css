@@ -1,0 +1,17 @@
+.table-cell {
+    font-weight: 900;
+    width: 90%;
+    height: 50px;
+    background-color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.delete {
+    color: white;
+    background-color: #f05f61;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
