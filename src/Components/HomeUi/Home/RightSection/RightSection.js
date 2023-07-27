@@ -19,6 +19,11 @@ const RightSection = ({updateUserList, userList}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         updateUserList(details);
+        setDetails({
+            id: '',
+            name: '',
+            comment: ''
+        })
         /* setUserList([...userList, details]); */
     }
 
@@ -56,17 +61,17 @@ const RightSection = ({updateUserList, userList}) => {
 
             <div className='form-group'>
                 <label className='user-label'>Id</label>
-                <input className='user-input' type='number' spellCheck='false' name='id' onChange={handleObjectChange}></input>
+                <input className='user-input' value={details.id} type='number' spellCheck='false' name='id' onChange={handleObjectChange}></input>
             </div>
 
             <div className='form-group'>
                 <label className='user-label'>Nombre de Usuario</label>
-                <input className='user-input' type='text' spellCheck='false' name='name' onChange={handleObjectChange}></input>
+                <input className='user-input' value={details.name} type='text' spellCheck='false' name='name' onChange={handleObjectChange}></input>
             </div>
 
             <div className='form-group'>
                 <label className='user-label'>Comentario</label>
-                <input className='user-input' type='text' spellCheck='false' name='comment' onChange={handleObjectChange    }></input>
+                <input className='user-input' value={details.comment} type='text' spellCheck='false' name='comment' onChange={handleObjectChange    }></input>
             </div>
 
             <input type='submit' className='user-submit' name='submit'></input>
