@@ -43,4 +43,4 @@ export default Home;
 //replace todo lo que no sea numero por blanco
 //update modal
 // error key
-//limpiar campos
+//limpiar campos--
