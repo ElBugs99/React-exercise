@@ -16,12 +16,6 @@ export default function Modal({ info, isOpen, close , id, name, comment, changeU
         zIndex: 1000 
     } */
 
-    const updateUserList = (e) => {
-      e.preventDefault();
-      console.log('hola');
-
-    }
-
     const [nombre,setNombre] = useState(name);
     const [comentario, setComentario] = useState(comment);
 
