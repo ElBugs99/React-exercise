@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './modal.css'
 
-export default function Modal({ info, isOpen, close , id, name, comment}) {
+export default function Modal({ info, isOpen, close , id, name, comment, changeUserList}) {
 
     /* const MODAL_STYLES = {
         height: '60%',
@@ -51,7 +51,7 @@ export default function Modal({ info, isOpen, close , id, name, comment}) {
             <input className='modal-input' onChange={(e) => setNombre(e.target.value)} value={nombre} type='text' spellCheck='false'></input>
             <label>comentario:</label>
             <input className='modal-input' value={comentario} onChange={(e) => setComentario(e.target.value)} type='text' spellCheck='false'></input>
-            <input className='modal-send' onClick={(e) => updateUserList(e)} type='submit' value={'ENVIAR'} />
+            <input className='modal-send' onClick={(e) => changeUserList(e, id, nombre ,comentario)} type='submit' value={'ENVIAR'} />
         </form>
       {info}
     </div>

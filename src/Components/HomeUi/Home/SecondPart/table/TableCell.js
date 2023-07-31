@@ -2,7 +2,7 @@ import './tableCell.css';
 import Modal from '../../../../UI/Modal/Modal';
 import { useState } from 'react';
 
-const TableCell = ({id, name, comment, deleteUser}) => {
+const TableCell = ({id, name, comment, deleteUser, changeUserList}) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -14,7 +14,7 @@ const TableCell = ({id, name, comment, deleteUser}) => {
         <div>{comment}</div>
         <button className='delete' onClick={() => deleteUser(id)}>Eliminar</button>
         <button className='update' onClick={() => setIsOpen(true)}>update</button>
-        <Modal isOpen={isOpen} close={close} id={id} name={name} comment={comment}/>
+        <Modal isOpen={isOpen} close={close} id={id} name={name} comment={comment} changeUserList={changeUserList}/>
     </div>
 }
 

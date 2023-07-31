@@ -26,6 +26,22 @@ const Home = () => {
 
     const updateUserList = object => setUserList([...userList, object]);
 
+    const changeUserList = (e, id, newName, newComment) => {
+        e.preventDefault();
+        console.log('Enviar clickeado')
+        const newList = [...userList];
+        newList.forEach(element => {
+            if (element.id === id) {
+                element.name = newName;
+                element.comment = newComment;
+
+                console.log('Nuevo nombre: '+ newName);
+                console.log('Nuevo comentario: '+ newComment);
+                setUserList(newList);
+            }
+        });
+    };
+
     return <div className="home">
         <div className='first-part'>
             <LeftSection />
@@ -33,7 +49,7 @@ const Home = () => {
             <RightSection updateUserList={updateUserList} userList={userList} />
         </ div>
         <div className='second-part'>
-            <SecondPart userList={userList} deleteUser={deleteUser}/>
+            <SecondPart userList={userList} deleteUser={deleteUser} changeUserList={changeUserList}/>
         </div>
     </div>
 }
