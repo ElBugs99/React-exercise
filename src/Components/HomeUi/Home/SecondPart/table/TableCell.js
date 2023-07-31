@@ -14,7 +14,7 @@ const TableCell = ({id, name, comment, deleteUser}) => {
         <div>{comment}</div>
         <button className='delete' onClick={() => deleteUser(id)}>Eliminar</button>
         <button className='update' onClick={() => setIsOpen(true)}>update</button>
-        <Modal isOpen={isOpen} close={close}/>
+        <Modal isOpen={isOpen} close={close} id={id} name={name} comment={comment}/>
     </div>
 }
 

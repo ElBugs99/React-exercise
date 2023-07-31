@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './modal.css'
 
-export default function Modal({ info, isOpen, close }) {
+export default function Modal({ info, isOpen, close , id, name, comment}) {
 
     /* const MODAL_STYLES = {
         height: '60%',
@@ -15,6 +15,15 @@ export default function Modal({ info, isOpen, close }) {
         Padding: '50px',
         zIndex: 1000 
     } */
+
+    const updateUserList = (e) => {
+      e.preventDefault();
+      console.log('hola');
+
+    }
+
+    const [nombre,setNombre] = useState(name);
+    const [comentario, setComentario] = useState(comment);
 
     const OVERLAY_STYLES = {
         position: 'fixed',
@@ -36,10 +45,13 @@ export default function Modal({ info, isOpen, close }) {
             <button className='modal-close' onClick={() => close()}>Cerrrar</button>
         </div>
         <form className='modal-form'>
-            <input className='modal-input disabled' value={'123'} type='text' spellCheck='false' readOnly='true'></input>
-            <input className='modal-input' type='text' spellCheck='false'></input>
-            <input className='modal-input' type='text' spellCheck='false'></input>
-            <input className='modal-send' type='submit' value={'ENVIAR'} />
+            <label>ID:</label>
+            <input className='modal-input disabled' value={id} type='text' spellCheck='false' readOnly='true'></input>
+            <label>Nombre:</label>
+            <input className='modal-input' onChange={(e) => setNombre(e.target.value)} value={nombre} type='text' spellCheck='false'></input>
+            <label>comentario:</label>
+            <input className='modal-input' value={comentario} onChange={(e) => setComentario(e.target.value)} type='text' spellCheck='false'></input>
+            <input className='modal-send' onClick={(e) => updateUserList(e)} type='submit' value={'ENVIAR'} />
         </form>
       {info}
     </div>
