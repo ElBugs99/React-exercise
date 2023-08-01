@@ -12,7 +12,7 @@ const LeftSection = () => {
     /* console.log(characters) */
 
     return <div className='left-section'>
-        {characters.map((x) => <ExpoCard id={x.id} name={x.name} lastName={x.lastName} img={x.img}/>)}
+        {characters.map((x, i) => <ExpoCard key={i} id={x.id} name={x.name} lastName={x.lastName} img={x.img}/>)}
     </div>
 }
 
