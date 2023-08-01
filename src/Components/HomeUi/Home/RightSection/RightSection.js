@@ -40,10 +40,17 @@ const RightSection = ({updateUserList, userList}) => {
         //object destructuring
         const name = e.target.name;
         const value = e.target.value;
-        console.log(name, value)
+        
+        /* const modifiedId = id.replace(/[^0-9]/g,''); */
+        if (name === 'id') {
+            const modifiedId = value.replace(/[^0-9]/g,'');
+            setDetails((prevState) => ({...prevState, [name]: modifiedId}));
+        }else{
+            console.log(name, value)
         setDetails((prevState) => {
             return { ...prevState, [name]: value }
         })
+        }
     }
 
     /* const handleChange = (e) => {
@@ -61,7 +68,7 @@ const RightSection = ({updateUserList, userList}) => {
 
             <div className='form-group'>
                 <label className='user-label'>Id</label>
-                <input className='user-input' value={details.id} type='number' spellCheck='false' name='id' onChange={handleObjectChange}></input>
+                <input className='user-input' value={details.id} type='text' spellCheck='false' name='id' onChange={handleObjectChange}></input>
             </div>
 
             <div className='form-group'>
