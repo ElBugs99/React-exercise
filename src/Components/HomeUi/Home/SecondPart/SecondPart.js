@@ -2,7 +2,6 @@ import "./secondPart.css";
 import TableCell from "./table/TableCell";
 
 const SecondPart = ({ userList, deleteUser, changeUserList }) => {
-  //const deleteUser = (userList) => {};
 
   const listLog = () => console.log(userList);
 

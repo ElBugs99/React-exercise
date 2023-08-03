@@ -7,13 +7,6 @@ import { useState } from 'react';
 
 const Home = () => {
 
-    /* const addUser = user => setUsers([//replace state with new array
-        ...users, //copy old array
-        user //add new object at the end
-    ]) */
-    
-    /* console.log(obj[0]) */
-
     const [userList, setUserList] = useState([]);
 
     const deleteUser = (id) => {
