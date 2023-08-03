@@ -100,8 +100,8 @@ const RightSection = ({updateUserList, userList}) => {
             <input type='submit' className='user-submit' name='submit'></input>
 
         </form>
-        <button onClick={logsObject}>show object</button>
-        <button onClick={logsObjectList}>show object list</button>
+        <button onClick={logsObject}>show object log</button>
+        <button onClick={logsObjectList}>show object list log</button>
     </div>
 }
 
