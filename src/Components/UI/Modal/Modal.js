@@ -40,7 +40,7 @@ export default function Modal({ info, isOpen, close , id, name, comment, changeU
         </div>
         <form className='modal-form'>
             <label>ID:</label>
-            <input className='modal-input disabled' value={id} type='text' spellCheck='false' readOnly='true'></input>
+            <input className='modal-input disabled' value={id} type='text' spellCheck='false' readOnly={true}></input>
             <label>Nombre:</label>
             <input className='modal-input' onChange={(e) => setNombre(e.target.value)} value={nombre} type='text' spellCheck='false'></input>
             <label>comentario:</label>
