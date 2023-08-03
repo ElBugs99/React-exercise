@@ -21,7 +21,7 @@ const RightSection = ({updateUserList, userList}) => {
         updateUserList(details);
         setDetails({
             id: '',
-            names: '',
+            name: '',
             comment: ''
         })
         /* setUserList([...userList, details]); */
@@ -58,9 +58,15 @@ const RightSection = ({updateUserList, userList}) => {
         const value = e.target.value;
         console.log(name, value);
 
+        if (name === 'id') {
+            const modifiedId = value.replace(/[^0-9]/g,'');
+            setDetails((prevState) => ({...prevState, [name]: modifiedId}));
+        }else{
+            console.log(name, value)
         setDetails((prevState) => {
-            return {...prevState, [name]: value}
+            return { ...prevState, [name]: value }
         })
+        }
     }
 
     /* const handleChange = (e) => {
