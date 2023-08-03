@@ -21,7 +21,7 @@ const RightSection = ({updateUserList, userList}) => {
         updateUserList(details);
         setDetails({
             id: '',
-            name: '',
+            names: '',
             comment: ''
         })
         /* setUserList([...userList, details]); */
@@ -53,8 +53,14 @@ const RightSection = ({updateUserList, userList}) => {
     }
  */
 
-    const handleObjectChange = () => {
-        
+    const handleObjectChange = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        console.log(name, value);
+
+        setDetails((prevState) => {
+            return {...prevState, [name]: value}
+        })
     }
 
     /* const handleChange = (e) => {

@@ -11,6 +11,7 @@ const SecondPart = ({ userList, deleteUser, changeUserList }) => {
       <div></div>
       {userList.map((x, i) => (
         <TableCell
+          key={i}
           id={x.id}
           name={x.name}
           comment={x.comment}
