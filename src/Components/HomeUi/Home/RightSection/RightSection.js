@@ -36,12 +36,11 @@ const RightSection = ({updateUserList, userList}) => {
     }
 
 //                      event
-    const handleObjectChange = (e) => {
+/*     const handleObjectChange = (e) => {
         //object destructuring
         const name = e.target.name;
         const value = e.target.value;
-        
-        /* const modifiedId = id.replace(/[^0-9]/g,''); */
+
         if (name === 'id') {
             const modifiedId = value.replace(/[^0-9]/g,'');
             setDetails((prevState) => ({...prevState, [name]: modifiedId}));
@@ -51,6 +50,11 @@ const RightSection = ({updateUserList, userList}) => {
             return { ...prevState, [name]: value }
         })
         }
+    }
+ */
+
+    const handleObjectChange = () => {
+        
     }
 
     /* const handleChange = (e) => {
@@ -78,7 +82,7 @@ const RightSection = ({updateUserList, userList}) => {
 
             <div className='form-group'>
                 <label className='user-label'>Comentario</label>
-                <input className='user-input' value={details.comment} type='text' spellCheck='false' name='comment' onChange={handleObjectChange    }></input>
+                <input className='user-input' value={details.comment} type='text' spellCheck='false' name='comment' onChange={handleObjectChange}></input>
             </div>
 
             <input type='submit' className='user-submit' name='submit'></input>
